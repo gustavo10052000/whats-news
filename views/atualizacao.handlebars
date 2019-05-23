@@ -1,0 +1,124 @@
+{{#if errors}}
+    {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+    {{/each}}
+{{/if}}
+
+{{#if semErros}}
+    {{#each semErros}}
+        <div class="alert alert-success">{{msg}}</div>
+    {{/each}}
+{{/if}}
+
+<form action="/user/update" method="post">
+
+        <div class="container atualizar" id="atualizar">
+
+            <a href="/user/cadastro">
+                <button type="button" class="btn btn-info" class="botao">Cadastre-se</button>
+            </a>
+
+            <div class="form-group row justify-content-center">
+                <div class="col-4">
+                    <h1>Atualizar Cadastro</h1>
+                    <br />
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <label class="col-sm-2 col-form-label">Informe seu numero: </label>
+                <div class="col-4">
+                    <input type="tel" class="form-control" placeholder="Numero" name="numero" pattern="[0-9]{13}" maxlength="13">
+                    <p>Formato de numero: 5511999999999</p>
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <label class="col-sm-2 col-form-label">Senha :</label>
+                <div class="col-4">
+                    <input type="password" class="form-control" placeholder="Senha" name="senha">
+                    <p>Senha que usou durante o cadastro</p>
+                    <br />
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <div class="col-4">
+                    <label>Selecione o que deseja mudar</label>
+                    <br />
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <label class="col-sm-2 col-form-label">Nome :</label>
+                <div class="col-4">
+                    <input type="text" class="form-control" placeholder="Nome" name="nome" maxlength="15">
+                    <p>Apenas o primeiro nome</p>
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <div class="col-sm-2 col-form-label">Selecione as categorias que deseja receber notícias:</div>
+                <div class="col-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="categoria" value="economia">
+                        <label class="form-check-label">
+                            Economia
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="categoria" value="agronegocios">
+                        <label class="form-check-label">
+                            Agronegócio
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="categoria" value="tecnologia">
+                        <label class="form-check-label" f>
+                            Tecnologia
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="categoria" value="carros">
+                        <label class="form-check-label">
+                            Carros
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group row justify-content-center">
+                <div class="col-sm-2 col-form-label">Selecione o horario para receber as notícias:</div>
+                <div class="col-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="horario" value="06">
+                        <label class="form-check-label">
+                            6:00
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="horario" value="12">
+                        <label class="form-check-label">
+                            12:00
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="horario" value="18">
+                        <label class="form-check-label">
+                            18:00
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group row justify-content-center">
+                <div class="col-sm-6">
+                    <button type="submit" class="btn btn-info ">Atualizar Cadastro</button>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
