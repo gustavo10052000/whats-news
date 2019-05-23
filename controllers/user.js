@@ -186,9 +186,9 @@ exports.update = function (req, res, next) {
     
                 } else {
 
-                    var semErros = [{ msg : 'Numero ou senha invalidos!' }];
+                    var errors = [{ msg : 'Numero ou senha invalidos!' }];
 
-                    res.render('atualizacao', { semErros: semErros });
+                    res.render('atualizacao', { errors: errors });
 
                 }
             }
